@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Museric - Official singer-songwriter website.">
     <title>Museric | Official Artist Website</title>
+
     <style>
         * {
             box-sizing: border-box;
@@ -12,28 +14,46 @@
 
         body {
             margin: 0;
-            background: #171717;
+            background: #000;
             color: #f0ede6;
             font-family: Georgia, serif;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
             min-height: 100vh;
             min-height: 100dvh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             text-align: center;
+        }
+
+        main {
+            width: 100%;
+            max-width: 800px;
+            padding: 30px 20px;
+        }
+
+        .portrait {
+            display: block;
+            width: 100%;
+            max-width: 340px;
+            margin: 0 auto 25px;
+            mask-image: linear-gradient(
+                to bottom,
+                black 75%,
+                transparent 100%
+            );
         }
 
         h1 {
             font-size: clamp(2rem, 8vw, 5rem);
             letter-spacing: 0.2em;
             font-weight: normal;
-            margin: 25px 0;
+            margin: 20px 0;
         }
 
         .subtitle {
             font-family: Arial, sans-serif;
-            font-size: 12px;
+            font-size: 11px;
             letter-spacing: 4px;
             text-transform: uppercase;
         }
@@ -42,7 +62,7 @@
             width: 60px;
             height: 1px;
             background: #77736b;
-            margin: 30px auto;
+            margin: 25px auto;
         }
 
         .coming-soon {
@@ -52,19 +72,35 @@
         }
 
         footer {
-            position: absolute;
-            bottom: 25px;
+            padding: 25px;
             color: #77736b;
             font-size: 12px;
+        }
+
+        @media (max-width: 600px) {
+            .portrait {
+                max-width: 260px;
+            }
+
+            h1 {
+                letter-spacing: 0.15em;
+            }
         }
     </style>
 </head>
 <body>
 
     <main>
+        <img class="portrait"
+             src="museric.png"
+             alt="Museric artist portrait">
+
         <div class="subtitle">Singer &amp; Songwriter</div>
+
         <h1>MUSERIC</h1>
+
         <div class="line"></div>
+
         <div class="coming-soon">Coming Soon</div>
     </main>
 
